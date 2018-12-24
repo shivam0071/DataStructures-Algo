@@ -1,0 +1,39 @@
+20th December 2018
+
+1.) Efficiency:-
+How well we are using the computer resources to get the particular job done
+We can think it in terms of space and time efficiency
+
+Space - How much storage space is required
+Time - How much time the code takes to run
+
+
+2.) Notation
+
+Big O notation :-
+
+O("some algebra expression")
+some algebra expression - is a mathematical function of a variable n such as
+
+O(log(n))
+O(n)
+O(n^3)
+O(n^2)
+O(1) - Exception OR O(0n + 1)
+O(root n)
+O(n log(n))
+
+where n is the length of the input to our function
+
+
+Best Case
+Average Case
+Worst Case
+
+We just use approximation and calculate everything in terms of O(n)
+
+Space Complexity - If we have to copy a list 3 times then space complexity becomes
+O(3n)
+
+
+https://wiki.python.org/moin/TimeComplexity
