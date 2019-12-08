@@ -1,0 +1,71 @@
+https://www.youtube.com/watch?v=QKfk7YFILws
+
+TCP/IP (5 layers)
+
+Physical Layer (10 Base T, 802.11 )
+->
+Data Link Layer ( Ethernet , Wifi )
+->
+Network Layer (IP) ( For routing ..how to reach from A to B)
+->
+Transport Layer (TCP/UDP) .. Where app to send to...Fb data to Fb and gmail data to gmail
+->
+Application Layer  (HTTP, SMTP) ( Where data gets displayed )
+
+
+1.) CABLES
+
+Two types of cables:-
+    1.) Copper Cables[Uses Electrical Voltages to transmit data]
+    (cat5(Older), cat5e, cat6) (category) twisted pairs inside the cables determine the type and speed with
+    which the data is transferred
+    2.) Fiber Cables [Uses pulse of light to transmit data]- Costly
+
+2.) Hubs and Switches
+    Hub is "physical layer device" that allows for connections from many computers at once
+    A hub causes a
+    "Collision Domain" :  A network segment where only one device can communicate at a time
+    Thats why its not used today....
+
+
+    Network Switch (Data Link Layer Device):
+    It can inspect the data of the ethernet protocol data and then knows where to send the data hence reduces a collison domains
+
+
+Hubs and switches are the primary devices used to connect computers on a single network usually referred to as LAN
+but what if we want to send the data to the computers on the other computers on a different network...The ans is
+
+ROUTERS [Network Layer] : A device that knows how to forward data between independent networks
+It can inspect network layer data (IP) to decide where to send the data
+
+The main job of the router is to take the data present inside one network and feed it to the ISP
+now the ISP takes this data and another router works from here.
+
+this is the backbone of the Internet
+
+This ISP routers now have to make a lot of decision on how to send the data, paths etc
+
+These routers are connected to many other routers and they communicate via Border Gateway Protocol (BGP)
+using BGP - Routers share data with each other via this protocol which lets them learn about the most optimal
+paths to forward traffic
+
+
+
+* SERVERS and CLIENTS
+
+Any node can either be server or client or BOTH
+
+
+1.) THE PHYSICAL LAYER
+    Its main aim is to move 1s and 0s from one end of the link to the next
+
+    the way the data is transmitted is by modulation
+    Modulation is a way of varying the voltage of this charge moving across the cable
+
+    The CN version of this is Line Coding
+
+    SENDER --->  Digital Data (0101010111010000110) ---> ENCODER ---||----|| ----||--- DECODER(0101010111010000110) ----- RECEIVER
+
+    10 billion 1s and 0s get transmitted every second
+
+TWISTED PAIR Cabling and DUPLEXING [26:55]
