@@ -37,3 +37,17 @@ O(3n)
 
 
 https://wiki.python.org/moin/TimeComplexity
+
+
+
+Queue :-
+Enqueue - To add an element to the end
+
+Dequeue :-  To remove an element from the First(head)
+
+Peek - To look at the head
+
+Deques(deck) :- Double Ended Queues (we can en and dequeue from both the end)
+
+Priority Queue :- Elements with higher priority are dequeued first
+if 2 elemets have same priority then the older element is popped

@@ -82,7 +82,7 @@ class LinkedList(object):
       current = self.head
       if self.head:
         while current.next:
-          print(current.value,end=' ')
+          print(current.value)
           current = current.next
         else:
           print(current.value)
