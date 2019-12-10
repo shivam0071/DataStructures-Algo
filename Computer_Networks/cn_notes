@@ -68,4 +68,82 @@ Any node can either be server or client or BOTH
 
     10 billion 1s and 0s get transmitted every second
 
-TWISTED PAIR Cabling and DUPLEXING [26:55]
+TWISTED PAIR Cabling and DUPLEXING
+
+Twisted pair cables are twisted in order to avoid the electro magnetic interference and cross talk
+
+These cables allows for duplex communication
+
+Duplex Communication :- Info can flow in both direction across the cable
+Simplex is unidirection
+Full Duplex - Both talking at the same time...
+Half Duplx - Takes turn while talking... one at a time
+
+
+Network Ports and Patch Panels:
+
+RJ45 plug ( lan cable that we see)
+RJ45 - Registered Jack 45  (lan port)
+
+the port has 2 lights
+1.) Link Light (yellow) [when the cable is properly connected to 2 devices that are both powered ON]
+2.) Activity Light  (green) [When the data is being transmitted]
+
+
+DATA LINK LAYER
+ETHERNET and MAC Address
+
+Ethernet is the protocol used to send data across the links
+
+The main job of data link layer that it make sures that the other layers above it don't have to worry about
+which cables , connections etc are being used in the physical layer
+
+A browser does not need to know about how the device is connected to the internet
+
+Ethernet is OLD - 1980 ..1983
+
+back then there were no switches or hubs
+so how the collision domains were resolved ?
+    "Collision Domain" :  A network segment where only one device can communicate at a time
+    Thats why its not used today....
+    This is because all data is send to all the nodes connected to it...this can result in collison in eletrical current.
+
+Ethernet solved this by
+CSMA/CD : Carrier Sends multiple access / with collision detection
+Its used to determine when the communication channel are clear and when a device is free to transmit data
+
+If a computer wants to send a data it checks if someone else is not sending the data
+if yes then it waits for a random amount of time before sending the data again.
+
+NOW as the data is being transmitted to each and every node..so how do we know the actual node for which the data is meant for.
+for that we use.
+** MAC Media Access Control Address : A globally unique identifier attached to an individual network interface
+    Its a 48 bit number represented by 6 grouping if 2 hexadecimal numbers.
+
+......../......../......../......../......../......../......../......../
+HEXADECIMAL - 16 digits [1-9 A-F]
+Octet -  Any number that can be represented by 8 bits
+
+
+The MAC address is divided as
+
+Organizationally Unique Identifier - OUI
+First three octets of a MAC Address
+
+OUI
+Size in bits : 24
+Size in hex digits : 6 hex digits ( 1 octet = 2 Hex )
+Example - 00 60 2F
+Structure - Cisco
+
+Vendor Assigned (NIC cards ,Interfaces )
+Size in bits : 24
+Size in hex digits : 6 hex digits ( 1 octet = 2 Hex )
+Example - 3A 07 BC
+Structure - Particular Device
+
+
+So Ethernet uses MAC addresses of both the sender and receiver
+
+
+UNICAST , MULTICAST and BROADCAST [38:01]
