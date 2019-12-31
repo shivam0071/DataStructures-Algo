@@ -2,12 +2,12 @@ https://www.youtube.com/watch?v=QKfk7YFILws
 
 TCP/IP (5 layers)
 
-Physical Layer (10 Base T, 802.11 )
+Physical Layer (10 Base T, 802.11, Hubs )
 ->
-Data Link Layer ( Ethernet , Wifi )
+Data Link Layer ( Ethernet , Wifi, Switches )
 ->
 Network Layer (IP) ( For routing ..how to reach from A to B)
-->
+->z
 Transport Layer (TCP/UDP) .. Where app to send to...Fb data to Fb and gmail data to gmail
 ->
 Application Layer  (HTTP, SMTP) ( Where data gets displayed )
@@ -90,7 +90,7 @@ the port has 2 lights
 2.) Activity Light  (green) [When the data is being transmitted]
 
 
-DATA LINK LAYER
+2.) DATA LINK LAYER
 ETHERNET and MAC Address
 
 Ethernet is the protocol used to send data across the links
@@ -118,7 +118,7 @@ if yes then it waits for a random amount of time before sending the data again.
 NOW as the data is being transmitted to each and every node..so how do we know the actual node for which the data is meant for.
 for that we use.
 ** MAC Media Access Control Address : A globally unique identifier attached to an individual network interface
-    Its a 48 bit number represented by 6 grouping if 2 hexadecimal numbers.
+    Its a 48 bit number represented by 6 grouping of 2 hexadecimal numbers.
 
 ......../......../......../......../......../......../......../......../
 HEXADECIMAL - 16 digits [1-9 A-F]
@@ -147,3 +147,21 @@ So Ethernet uses MAC addresses of both the sender and receiver
 
 
 UNICAST , MULTICAST and BROADCAST [38:01]
+
+Unicast - Is always meant for just one receiving address
+
+At ethernet level this is done by looking at a special bit at the destination MAC Address
+If the least significant bit in the first octet of a destination address is set to "zero", IT
+means that ethernet frame is intended for only the destination address.
+
+that is, it will be sent to all but received only by one
+
+
+MULTICAST-
+If the least significant bit in the first octet of a destination address is set to "ONE", IT
+means that ethernet frame is intended for multiple destination address.
+
+BROADCAST -Received by Every Single Device using broadcast address
+Broadcast Address - FF:FF:FF:FF:FF:FF
+
+Data Packet - An all encompassing term that represents any single set of binary data being sent across a network link
