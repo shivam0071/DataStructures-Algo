@@ -1,0 +1,11 @@
+12/1/2020 1:34
+# Music - Mortified
+# An array is a special variable, which can hold more than one value at a time.
+
+For example, an array of 10 32-bit (4 bytes) integer variables, with indices 0 through 9,
+may be stored as 10 words at memory addresses 2000, 2004, 2008, ... 2036,
+so that the element with index i has the address 2000 + (i × 4)
+
+# To DO
+1.) how array is stored in memory
+2.) how dynamic array works
