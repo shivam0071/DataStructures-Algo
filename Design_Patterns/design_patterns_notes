@@ -1,0 +1,38 @@
+There are a total of 23 classic design patterns for GOF book
+and these can be catogarized into 3 main parts
+1.) Creational -- All about different ways to create objects
+2.) Structural --  About relationship of the objects
+3.) Behavioural -- Interaction or Communication between these objects
+
+
+Loosely Coupled and Tightly Coupled Code
+
+1.) A loosely coupled code is the code where the code is working together
+but is not depended on each other
+
+2.) Tightly coupled code is highly depended on each other
+
+For example  If a tyre gets puntured of a car then you wont fix tyre as well as streeing
+wheel or engine...you just fix the tyres
+
+Code should be written in similar way
+
+
+WE can make a LOOSELY COUPLED apps using INTERFACES
+
+
+INTERFACES -
+A contract that specifies the capabilities that a class should provide
+for example - Suppose we want to open a Restorant and we need a chef
+We don't care who the chef is but we only care what action should he perform
+like cooking indian food, chinese food etc...So we can bring any person to do this job
+and such a system is a loosely coupled system
+
+            CHEF (INTERFACE)
+
+JOHN(CLASS)           Mary (CLASS)
+
+
+Lets have a look at Tax Calculator example : file - interface_tax_calc_2.py
+tax calculation might change each year but the main job of this calculator is
+to calculate tax
