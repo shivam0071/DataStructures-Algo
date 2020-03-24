@@ -53,6 +53,20 @@ def twoSumBest(ls, target):
 #   1.) Observe if there is any maths involved
 #   2.) Think if this can be memoized
 
+# ANSWER 2
+@sweet_formatting("Using Kadanes Algo Time and Space Complexity O(N)","2. Max Sum Subarray")
+def maximum_subarray(nums):
+  """
+  We can do it using Kadane's Algorithm
+  """
+  # [-2, 1, -3, 4, -1, 2, 1, -5, 4]
+  maximum = nums[0]
+  current = maximum
+  for idx in range(1, len(nums)):
+    current = max(current + nums[idx], nums[idx])
+    maximum = max(maximum, current)
+
+  return maximum
 
 # Answer 3
 @sweet_formatting("3. Memoize Solution", "First Duplicate")
@@ -167,9 +181,15 @@ if __name__ == "__main__":
 
 
   # *************************************************
-  # 2 . 22/03/2020 Sunday, Corona Curfew 10:23 AM
-  # Given a list of integers, find the longest product subarray
-  # [2, 4,-5, 9, 7 ,4]
+  # PROBLEM 2 . 22/03/2020 Sunday, Corona Curfew 10:23 AM
+  # Leet Code Easy "53. Maximum Subarray"
+  # "Given an integer array nums, find the contiguous subarray (containing at least one number) which has the largest sum and return its sum."
+  # [-2,1,-3,4,-1,2,1,-5,4] Output - 6 ,
+  #  Explanation [4,-1,2,1] has the largest sum = 6.
+  ls = [-2,1,-3,4,-1,2,1,-5,4]
+  maximum_subarray(ls)
+  # "Runtime: 56 ms, faster than 98.84% of Python3 online submissions for Maximum Subarray.
+  # Memory Usage: 13.6 MB, less than 71.54% of Python3 online submissions for Maximum Subarray."
 
 
 
