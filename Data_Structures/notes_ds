@@ -1,0 +1,29 @@
+
+
+TRICKS -
+
+1.) FIND MIDPOINT USING - Mainly used for Binary Search
+mid = start + (end-start) // 2   --> if start is somewhere in the middle then we take account of the elements before the start point
+
+2.) RIGHT INDEX - LEFT INDEX
+this gives the total item between to index exluding the Left Index
+    [1, 1, 1, "2", 3, "4", 5, 6, 1, 1]
+    5 - 3 = 2 meaning 2 items within these 2 index that is element 3 and 4 (not 2)
+
+3.) BINARY SEARCH
+Whenever you see any question that ned to be done in O(log n) than that question is a variation of Binary Search
+
+4.) MIN MAX functions are really handy
+
+
+************************************************************************************************************************************************************************
+************************************************************************************************************************************************************************
+************************************************************************************************************************************************************************
+
+FOR SOLVING PROBLEMS
+1.) For array based questions try to
+    * find a pattern
+    * use maths if possible
+    * use hash maps to solve the problems
+    * sliding window
+    * if nothing works then go brute force  ( atleast you will have a solution)
