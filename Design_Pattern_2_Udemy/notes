@@ -1,0 +1,40 @@
+08/04/2020
+SOLID
+
+1.) S - SINGLE RESPONSIBILITY PRINCIPLE (SRP)
+A class should only have one responsibility and it should not have other responsibilities
+example in 1_SOLID_S.py
+Here we have created a class called Journal which stores our thoughts...
+So the basic functionality of this class should only be
+1.) Adding text to Journal
+2.) Removing text from Journal
+3.) Displaying content of Journal
+
+but at some times we might feel like adding a
+* Save to file functionality
+* Loading the saved file
+* Loading from Web and so on
+
+Which is not a good practice because now we want things to be persistent which can be handled by a separate class
+whose primary goal is to save and load Journals
+
+So now if we have different types of Journals and each have its own save and load, We will have to do the code changes to
+each and every journal class which can we avoided if we have a separate Save Class
+
+ANTI-PATTERNS - So some of us inexperienced programmers end up creating a GOD object
+where a single class have many different functionality which is hard to maintain and understand
+
+
+2.) O - OPEN CLOSE PRINCIPLE
+Open for extension, closed for modification
+Whenever we create some class and deploy it,
+and if there are some changes in the future then rather than changing the original Class, extend that class and make changes to the new class
+
+This is done because the Old class is already Tested and deployed and adding new code to it is not a good principle
+as one might keep adding code to it and it will become unreadable at sometime
+
+So Generally, Create a base class and define the rules that all the subclass should follow
+and start making new Classes according to the req, if new code is to be added to these
+subclasses add another class
+Create specifications
+Lets have a look at 2_SOLID_O.py
