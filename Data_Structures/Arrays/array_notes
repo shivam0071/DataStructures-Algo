@@ -1,3 +1,17 @@
+12/04/2020 12:01 PM
+TIPS FOR QUESTION SOLVING
+
+1.) When you want to append something to  the left side of the list, use a deque
+collections.deque() and use its appendleft() method
+
+2.) COLLECTIONS.COUNTER
+a = collections.Counter("cool")
+a = {"c":1,"o":2,"l":1}
+If you are using counter sometimes you might need to create a list using the about dictionary, in an expanded form for that
+use:
+list(a.elements())
+[c,o,o,l]
+
 12/1/2020 1:34 PM
 # Music - Mortified
 # An array is a special variable, which can hold more than one value at a time.

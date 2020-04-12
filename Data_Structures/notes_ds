@@ -15,7 +15,16 @@ Whenever you see any question that ned to be done in O(log n) than that question
 
 4.) MIN MAX functions are really handy
 
+5.) When you want to append something to  the left side of the list, use a deque
+collections.deque() and use its appendleft() method
 
+6.) COLLECTIONS.COUNTER
+a = collections.Counter("cool")
+a = {"c":1,"o":2,"l":1}
+If you are using counter sometimes you might need to create a list using the about dictionary, in an expanded form for that
+use:
+list(a.elements())
+[c,o,o,l]
 ************************************************************************************************************************************************************************
 ************************************************************************************************************************************************************************
 ************************************************************************************************************************************************************************
@@ -26,4 +35,6 @@ FOR SOLVING PROBLEMS
     * use maths if possible
     * use hash maps to solve the problems
     * sliding window
+    * Use hashsets when dealing with unique values,also we can make user of strings in a hash set
+    * sometime you might need to traverse the loop backwards
     * if nothing works then go brute force  ( atleast you will have a solution)

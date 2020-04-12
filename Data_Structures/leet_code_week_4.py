@@ -163,6 +163,24 @@ def distributeCandies_2(candies: int, num_people: int) :
         counter += 1
     print(out)
 
+@sweet_formatting("Sliding window O(n)","3. Medium")
+def lengthOfLongestSubstring(s: str):
+    # "abcabcbb"
+    left = 0
+    right = 0
+    max_s = 0
+    hash_set = set()
+    while right < len(s):
+        if s[right] not in hash_set:
+            hash_set.add(s[right])
+            right += 1
+            max_s = max(len(hash_set), max_s)
+        else:
+            hash_set.remove(s[left])
+            left += 1
+    print(max_s)
+
+
 if __name__ == "__main__":
     # problem 16 - EASY
     # 06/04/2020 11:36 PM
@@ -216,6 +234,7 @@ if __name__ == "__main__":
     # "Runtime: 80 ms, faster than 98.36% of Python3 online submissions for Jump Game.
     # Memory Usage: 15.9 MB, less than 7.14% of Python3 online submissions for Jump Game."
 
+    # problem 19
     # 36.Valid Sudoku
     board = [
         ["5", "3", ".", ".", "7", ".", ".", ".", "."],
@@ -244,6 +263,7 @@ if __name__ == "__main__":
     # "Runtime: 104 ms, faster than 35.37% of Python3 online submissions for Valid Sudoku.
     # Memory Usage: 13.6 MB, less than 5.88% of Python3 online submissions for Valid Sudoku."
 
+    # problem 20
     # Problem 1103 EASY
     # "Input: candies = 7, num_people = 4
     # Output: [1,2,3,1]
@@ -263,3 +283,13 @@ if __name__ == "__main__":
     distributeCandies_2(candies, num_people)
     # Runtime: 40 ms, faster than 40.18% of Python3 online submissions for Distribute Candies to People.
     # Memory Usage: 14.2 MB, less than 100.00% of Python3 online submissions for Distribute Candies to People.
+
+    # Problem 21 11/04/2020 12:42 PM
+    # 3. Longest Substring Without Repeating Characters
+    # Input: "abcabcbb"
+    # Output: 3
+    # Explanation: The answer is "abc", with the length of 3.
+    s = "pwwkew"
+    lengthOfLongestSubstring(s)
+    # Runtime: 72 ms, faster than 46.13% of Python3 online submissions for Longest Substring Without Repeating Characters.
+    # Memory Usage: 14 MB, less than 5.10% of Python3 online submissions for Longest Substring Without Repeating Characters.
