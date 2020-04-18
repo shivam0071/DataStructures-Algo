@@ -25,6 +25,15 @@ If you are using counter sometimes you might need to create a list using the abo
 use:
 list(a.elements())
 [c,o,o,l]
+
+7.) LEAP DAYS
+return 1 if year % 4 == 0 and year % 100 != 0 or year % 400 == 0 else 0
+
+8.)A Linear Time Majority Vote Algorithm ->  http://www.cs.utexas.edu/~moore/best-ideas/mjrty/
+the conditions is the element should appear more than len(list)/2
+
+9.) Shifting similar elements at the end of the array(inplace) can be done by updating the current array without 0s (by iterating over it, list comprehensiion)
+and then adding that element in the end
 ************************************************************************************************************************************************************************
 ************************************************************************************************************************************************************************
 ************************************************************************************************************************************************************************

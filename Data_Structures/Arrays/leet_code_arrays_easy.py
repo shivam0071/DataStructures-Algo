@@ -258,3 +258,61 @@ if __name__ == "__main__":
     #     Runtime: 44 ms, faster than 78.74% of Python3 online submissions for Find Common Characters.
     # Memory Usage: 13.7 MB, less than 5.55% of Python3 online submissions for Find Common Characters.
 
+
+
+
+
+    # 13-04-2020 to 19-04-2020
+
+    #13-04-2020 10:30 AM
+    # Problem 21
+    # 1200. Minimum Absolute Difference
+    # Runtime: 364 ms, faster than 68.81% of Python3 online submissions for Minimum Absolute Difference.
+    # Memory Usage: 27.8 MB, less than 100.00% of Python3 online submissions for Minimum Absolute Difference.
+
+
+    # Problem 22
+    # 1207. Unique Number of Occurrences
+    # Runtime: 24 ms, faster than 98.68% of Python3 online submissions for Unique Number of Occurrences.
+    # Memory Usage: 13.8 MB, less than 100.00% of Python3 online submissions for Unique Number of Occurrences.
+
+    # PRoblem 23
+    # 985. Sum of Even Numbers After Queries
+    #Runtime: 560 ms, faster than 46.52% of Python3 online submissions for Sum of Even Numbers After Queries.
+    # Memory Usage: 19.4 MB, less than 5.88% of Python3 online submissions for Sum of Even Numbers After Queries
+
+    # Problem 24
+    # 1089. Duplicate Zeros
+    #     Runtime: 76 ms, faster than 31.96% of Python3 online submissions for Duplicate Zeros.
+    # Memory Usage: 14.6 MB, less than 100.00% of Python3 online submissions for Duplicate Zeros.
+
+    # PRoblem 25
+    # 485. Max Consecutive Ones
+    #     Runtime: 396 ms, faster than 35.21% of Python3 online submissions for Max Consecutive Ones.
+    # Memory Usage: 14.1 MB, less than 7.69% of Python3 online submissions for Max Consecutive Ones.
+
+    # Problem 26 - 17/04/2020
+    # 169. Majority Element
+   # Runtime: 176 ms, faster than 68.16% of Python3 online submissions for Majority Element.
+    # Memory Usage: 15.1 MB, less than 7.14% of Python3 online submissions for Majority Element.
+    # SOURCE - http://www.cs.utexas.edu/~moore/best-ideas/mjrty/
+    # This is insane...it just counts each number...and then substracts if any othr number is found
+    # eventhough the speed is same as my solution
+
+    # Problem 27
+    # 283. Move Zeroes
+    # Runtime: 116 ms, faster than 21.97% of Python3 online submissions for Move Zeroes.
+    # Memory Usage: 15.1 MB, less than 5.97% of Python3 online submissions for Move Zeroes.
+    # VERY SLOW, lets try to improve it...one way of doing it is iterate over the array and update the existing array without 0s...finally append the required 0s
+
+    # 18 -04 -2020  12:00 PM
+    # Problem 28
+    # 1331. Rank Transform of an Array
+    #     Runtime: 368 ms, faster than 68.23% of Python3 online submissions for Rank Transform of an Array.
+    # Memory Usage: 31.6 MB, less than 100.00% of Python3 online submissions for Rank Transform of an Array.
+
+    # Problem 29
+    # 1170. Compare Strings by Frequency of the Smallest Character
+    # Runtime: 4672 ms, faster than 5.95% of Python3 online submissions for Compare Strings by Frequency of the Smallest Character.
+    # Memory Usage: 14.4 MB, less than 100.00% of Python3 online submissions for Compare Strings by Frequency of the Smallest Character.
+    # VERY  SLOW -- BRUTE FORCE

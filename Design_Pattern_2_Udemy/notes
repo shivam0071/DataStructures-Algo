@@ -41,3 +41,50 @@ Lets have a look at 2_SOLID_O.py
 
 
 3.)L -  LISKOV SUBSTITUTION PRINCIPLE - (LSP)
+If you have an interface and have some sort of base class, then you can add any class to it and it should  work?
+# Take The rectangle and square class example here,
+You should be able to substitute a base type for a subtype
+
+4.) I - Interface Segregation Principle - ISP
+Keep only those methods in an Interface which will be used by every subclass, If you use different methods
+then it might be helpful for some use cases but might not needed in other classes, hence an unusable API would be visible
+to the user of this classes
+this is also called YAGNI - you aren't gonna need it, meaning implement only whats required
+
+# Example - 3_SOLID_I
+Here we have a printer interface and we need to create printer subclasses
+
+5.) D - Dependency Inversion Principle - DIP
+High level modules should not depend on low level modules, instead they should depend on abstractions(abstract class, interfaces)
+
+
+________________________________________________________________________________________
+16-04-2020 11:10 AM
+GAMMA Categorization
+
+1.) Creational Patters -
+Deals with the creation (construction) of Objects
+Explicit(constructor) vs implicit (Dependency Injection, Reflection etc)
+Wholesale (single statement) vs piecewise (step by step)
+
+2.) Structural Patterns -
+Concerned with the structures (eg Class members)
+Many patters are wrappers that mimic the underlying class/interface
+Importance of good API design
+
+3.) Behavioral Patterns -
+They are all different; no central theme
+
+________________________________________________________________________________________
+
+1.) BUILDER PATTERNS
+When piecewise object construction is complicated, Build provides an API for doing it step by step
+
+Some objects are simple and can be created in a Single initializer call
+Other objects require a lot of ceremony to create
+Having an obj with 10 initializer args is not productive
+
+Instead we opt for piecewise construction
+Hence a builder provides an API for constructing an object step by step
+
+Lets make an HTMLBuilder for HTML CLASS -- 5_BUILDER_1
