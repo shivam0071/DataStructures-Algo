@@ -1,0 +1,30 @@
+# Good Stack Questions
+
+1130. Minimum Cost Tree From Leaf Values
+901. Online Stock Span
+856. Score of Parentheses
+42. Trapping Rain Water
+
+# Monotonic Stack Questions
+907. Sum of Subarray Minimums
+496. Next Greater Element I
+503. Next Greater Element II
+84. Largest Rectangle in Histogram
+122. Best time to buy and sell stock 2
+862. Shortest subarray
+
+# https://www.geeksforgeeks.org/stack-in-python/
+
+# USING LIST
+# list has a few shortcomings. The biggest issue is that it can run into speed issue as it grows.
+# The items in list are stored next to each other in memory, if the stack grows bigger than the block of memory
+# that currently hold it, then Python needs to do some memory allocations. This can lead to some append() calls taking much
+# longer than other ones.
+
+
+# collections.deque
+ Deque is preferred over list in the cases where we need quicker append and pop operations from both the ends
+ of the container, as deque provides an O(1) time complexity for append and pop operations as compared to list which provides O(n)
+ time complexity.
+
+ # Another is Queue module, which is generally used with multiprocessing and threading

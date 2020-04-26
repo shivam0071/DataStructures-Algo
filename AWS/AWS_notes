@@ -1,0 +1,48 @@
+25-04-2020
+1.) IAM - Identity and Access Management
+
+ROOT ACCOUNT -  The main email ID that we use to create an Amazon Account
+
+* Create different account for different types of users acc to their tasks..
+  such as developers, data scientist, researchers , business etc
+* Always use MFA
+
+Use Root Only for :
+* Modify root user details
+* change AWS support plan
+* change payment options
+* closing the account
+
+for other tasks use an IAM account
+
+
+Features of IAM
+* Manage user and their access
+* Manage access of Federated Users
+* Service with no additional charge
+* Fine grain access to AWS resources
+
+
+IAM BASICS --
+* IAM provides centralized control to your AWS, IAM is global..no region required
+* IAM allows you to setup own password rotation policy
+* When we create a new user, no permission were first granted
+* AWS consoler requires USerID and Pass while backend access req access key and secret access..there a created by AWS when a new user is created
+* if still you struggle..they provide us access to API and command line
+* MFA
+
+
+IAM Components
+USER
+Root -- Full Access
+Power User -- Admin Access except billing
+IAM -- Access to resources based on permissions
+
+Group - A collection of IAM users..
+
+Role -- set of permissions for making AWS service requests
+
+Policies -- Json defining permissions to users groups or roles
+
+
+

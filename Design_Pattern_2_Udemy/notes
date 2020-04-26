@@ -62,7 +62,7 @@ ________________________________________________________________________________
 16-04-2020 11:10 AM
 GAMMA Categorization
 
-1.) Creational Patters -
+1.) Creational Patterns -
 Deals with the creation (construction) of Objects
 Explicit(constructor) vs implicit (Dependency Injection, Reflection etc)
 Wholesale (single statement) vs piecewise (step by step)
@@ -88,3 +88,7 @@ Instead we opt for piecewise construction
 Hence a builder provides an API for constructing an object step by step
 
 Lets make an HTMLBuilder for HTML CLASS -- 5_BUILDER_1
+
+1.1) Builder Facets - Using multiple builders
+5_BUILDER_2
+

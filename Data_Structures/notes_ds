@@ -34,6 +34,19 @@ the conditions is the element should appear more than len(list)/2
 
 9.) Shifting similar elements at the end of the array(inplace) can be done by updating the current array without 0s (by iterating over it, list comprehensiion)
 and then adding that element in the end
+
+10.) DYNAMIC PROGRAMMING Boilerplate
+
+        dp = [0] * (len(nums) + 1)
+        dp[0] = 0
+        dp[1] = nums[0]
+
+        for i in range(1, len(nums) + 1)
+            pass
+
+
+        retunr dp[len(nums) + 1]
+
 ************************************************************************************************************************************************************************
 ************************************************************************************************************************************************************************
 ************************************************************************************************************************************************************************
@@ -47,3 +60,8 @@ FOR SOLVING PROBLEMS
     * Use hashsets when dealing with unique values,also we can make user of strings in a hash set
     * sometime you might need to traverse the loop backwards
     * if nothing works then go brute force  ( atleast you will have a solution)
+
+
+2.) While reading other's code
+    * TRY to understand the algorithm and intuition behind using a particular solution
+
