@@ -47,6 +47,13 @@ and then adding that element in the end
 
         retunr dp[len(nums) + 1]
 
+11.) REVERSING something - can be done using 2 pointes at 0 an n-1 and then swapping the elements
+
+12.) Max- Min values in python --  float('inf') # Setting it to max, float(-'inf')
+
+13.) REGEX to remove all special characters -> re.sub('[^A-Za-z0-9]+', '', s), This can also be done by running a loop 
+and checking for isalphanum() and creating a new version of the string.
+
 ************************************************************************************************************************************************************************
 ************************************************************************************************************************************************************************
 ************************************************************************************************************************************************************************

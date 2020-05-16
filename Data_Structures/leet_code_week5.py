@@ -122,3 +122,53 @@ if __name__ == "__main__":
     # Others have converted the num into binary and for every 0 count += 1 and for every 1 , count += 2 (subtract and divide)
     # except for the first 1...that will be 1-1 ...hence count = 1
     # Runtime - Runtime: 24 ms, faster than 89.61% of Python3 online submissions for Number of Steps to Reduce a Number to Zero
+
+
+    # just adding some easy questions here, WEEK 6 - 27th April 2020 - 03rd May 2020
+    
+    # 1309. Decrypt String from Alphabet to Integer Mapping
+    # Runtime: 20 ms, faster than 98.12% of Python3 online submissions for Decrypt String from Alphabet to Integer Mapping.
+    # Memory Usage: 13.7 MB, less than 100.00% of Python3 online submissions for Decrypt String from Alphabet to Integer Mapping.
+    # NICE BOI 
+
+    # 1374. Generate a String With Characters That Have Odd Counts
+    # Runtime: 28 ms, faster than 67.23% of Python3 online submissions for Generate a String With Characters That Have Odd Counts.
+    # Memory Usage: 14 MB, less than 100.00% of Python3 online submissions for Generate a String With Characters That Have Odd Counts.
+
+
+    # 557. Reverse Words in a String III
+    # Runtime: 28 ms, faster than 89.84% of Python3 online submissions for Reverse Words in a String III.
+    # Memory Usage: 14.3 MB, less than 7.69% of Python3 online submissions for Reverse Words in a String III.
+
+    # 929. Unique Email Addresses
+    #Runtime: 40 ms, faster than 98.11% of Python3 online submissions for Unique Email Addresses.
+    # Memory Usage: 13.9 MB, less than 6.25% of Python3 online submissions for Unique Email Addresses.
+
+    # 657. Robot Return to Origin
+    # Runtime: 60 ms, faster than 58.78% of Python3 online submissions for Robot Return to Origin.
+    # Memory Usage: 13.9 MB, less than 6.90% of Python3 online submissions for Robot Return to Origin.
+
+    # 824. Goat Latin
+    # Runtime: 24 ms, faster than 90.41% of Python3 online submissions for Goat Latin.
+    # Memory Usage: 13.8 MB, less than 11.11% of Python3 online submissions for Goat Latin.
+
+    # 917. Reverse Only Letters
+    # Runtime: 24 ms, faster than 92.69% of Python3 online submissions for Reverse Only Letters.
+    # Memory Usage: 13.8 MB, less than 5.56% of Python3 online submissions for Reverse Only Letters.
+
+    # 1417. Reformat The String
+    # Runtime: 48 ms, faster than 74.09% of Python3 online submissions for Reformat The String.
+    # Memory Usage: 14.1 MB, less than 100.00% of Python3 online submissions for Reformat The String.    
+
+    # 11. Container With Most Water -- Medium -- O(n)
+    # Runtime: 128 ms, faster than 77.46% of Python3 online submissions for Container With Most Water.
+    # Memory Usage: 15.3 MB, less than 5.26% of Python3 online submissions for Container With Most Water.
+
+    # 1431. Kids With the Greatest Number of Candies - VEry Easy
+    # Runtime: 36 ms, faster than 78.44% of Python3 online submissions for Kids With the Greatest Number of Candies.
+    # Memory Usage: 13.9 MB, less than 100.00% of Python3 online submissions for Kids With the Greatest Number of Candies.
+
+    
+    # 167. Two Sum II - Input array is sorted
+    # Runtime: 60 ms, faster than 87.02% of Python3 online submissions for Two Sum II - Input array is sorted.
+    # Memory Usage: 14.2 MB, less than 5.80% of Python3 online submissions for Two Sum II - Input array is sorted.

@@ -46,3 +46,41 @@ Policies -- Json defining permissions to users groups or roles
 
 
 
+S3 - Simple Storage Service
+Thing are stored as Objects
+You can consider this as folders of windows
+
+* you can store
+    Files
+    Static Webistes
+    Large Files
+    Archiving Data
+    Backup
+
+Used by Clients such as Netflix, Airbnb, thomas reuters
+
+S3 supports Object Storage(buckets) and Block Storage(EC2)
+
+Object Storage - Normal Files
+* Data
+* Metadata and URL
+* Unique Identifier
+
+Block Storage - They do not have metadata,
+* Data is stored in Volumes and blocks
+*  Files are split into evenly-sized blocks
+* each blocks has its own address
+* host DB supports random read/write operations
+
+
+BUCKETS :- container for objects, just like folders have files
+bucket - folders
+object - files
+
+Buckets CANT have same name...
+Versioning is also there for buckets...which stores all the versions of a object...once an object is versioned it can't be unversioned
+
+
+
+
+
