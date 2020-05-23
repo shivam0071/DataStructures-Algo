@@ -52,6 +52,73 @@ def reverse(x: int):
         return 0
     return res
 
+@sweet_formatting("HARD", "273 - Integers to English Words")
+def numberToWords(num):
+    to19 = 'One Two Three Four Five Six Seven Eight Nine Ten Eleven Twelve ' \
+           'Thirteen Fourteen Fifteen Sixteen Seventeen Eighteen Nineteen'.split()
+    tens = 'Twenty Thirty Forty Fifty Sixty Seventy Eighty Ninety'.split()
+    def words(n):
+        if n < 20:
+            return to19[n-1:n]
+        if n < 100:
+            return [tens[n//10-2]] + words(n%10)
+        if n < 1000:
+            return [to19[n//100-1]] + ['Hundred'] + words(n%100)
+        for p, w in enumerate(('Thousand', 'Million', 'Billion'), 1):
+            if n < 1000**(p+1):
+                return words(n//1000**p) + [w] + words(n%1000**p)
+    return ' '.join(words(num)) or 'Zero'
+
+@sweet_formatting("SUNIL","")
+def shunil():
+    print("Type any number here : ")
+    user_input = input()
+    while not(user_input.isdigit()):
+        print("only number are allowed ")
+        print("type any number here : ")
+        user_input=input()
+    ones = {"0":" ","1":"one ","2":"two ","3":"three ","4":"four ","5":"five ","6":"six ",
+    "7":"seven ","8":"eight ","9":"nine "}
+    tens={"0":"ten ","1":"eleven ","2":"twelve ","3":"thirteen ","4":"fourteen ",
+    "5":"fifteen ","6":"sixteen ","7":"seventeen ","8":"eighteen ","9":"nineteen "}
+    tens_2={"0":" ","2":"twenty ","3":"thirty ","4":"forty ","5":"fifty "
+    ,"6":"sixty ","7":"seventy ","8":"eighty ","9":"ninety "}
+    hundred ={"0":" ","1":"one hundred ","2":"two hundred ","3":"three hundred ",
+    "4":"four hundred ","5":"five hundred ","6":"six hundred ","7":"seven hundred ",
+    "8":"eight hundred ","9":"nine hundred "}
+    comma_word = {"3":"thousand ","6":"million ","9":"billion "}
+
+    container = " "
+    copy_input = user_input
+    index_switch = len(user_input)
+    comma_switch = 3
+    while index_switch>0:
+        if user_input=="0":
+            container = "zero"
+            break
+        if copy_input[index_switch-2]=="1":
+            for digit in tens:
+                if copy_input[index_switch-1]==digit:
+                    container=tens[digit] + container
+        else:
+            for digit_1 in ones:
+                if copy_input[index_switch-1]==digit_1:
+                    container=ones[digit_1]+container
+            if index_switch>1:
+                for digit_2 in tens_2:
+                    if copy_input[index_switch-2]==digit_2:
+                        container=tens_2[digit_2]+container
+        if index_switch>2:
+            for digit_3 in hundred:
+                if copy_input[index_switch-3]==digit_3:
+                    container = hundred[digit_3]+container
+        if index_switch>3:
+            container = comma_word[str(comma_switch)]+container
+        comma_switch=comma_switch+3
+        index_switch=index_switch-3
+
+    print(container)
+
 if __name__ == "__main__":
     # 18/04/2020
     # Problem 22
@@ -172,3 +239,18 @@ if __name__ == "__main__":
     # 167. Two Sum II - Input array is sorted
     # Runtime: 60 ms, faster than 87.02% of Python3 online submissions for Two Sum II - Input array is sorted.
     # Memory Usage: 14.2 MB, less than 5.80% of Python3 online submissions for Two Sum II - Input array is sorted.
+
+
+    # 14-05-2020 : 10:10 PM
+    # 125. Valid Palindrome
+    # Runtime: 36 ms, faster than 94.65% of Python3 online submissions for Valid Palindrome.
+    # Memory Usage: 15.2 MB, less than 9.52% of Python3 online submissions for Valid Palindrome.
+
+    # 16-05-2020
+    # 916. Word Subsets
+    # Runtime: 628 ms, faster than 90.14% of Python3 online submissions for Word Subsets.
+    # Memory Usage: 17.5 MB, less than 50.00% of Python3 online submissions for Word Subsets.
+
+
+    numberToWords(1234567891)
+    shunil()

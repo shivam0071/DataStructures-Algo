@@ -54,6 +54,9 @@ and then adding that element in the end
 13.) REGEX to remove all special characters -> re.sub('[^A-Za-z0-9]+', '', s), This can also be done by running a loop 
 and checking for isalphanum() and creating a new version of the string.
 
+14.) SLOW FAST POINTERS (876) - Each time, slow go 1 steps while fast go 2 steps.
+When fast arrives at the end, slow will arrive right in the middle.
+
 ************************************************************************************************************************************************************************
 ************************************************************************************************************************************************************************
 ************************************************************************************************************************************************************************
