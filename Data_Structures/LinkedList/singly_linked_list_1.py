@@ -64,9 +64,6 @@ class LinkedList:
     def remove_value(self, val):
         pass
 
-
-
-
 class Stack(LinkedList):
 
     def __init__(self):
