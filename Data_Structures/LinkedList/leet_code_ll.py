@@ -149,12 +149,33 @@ class Solution:
         print(prev)
         return prev
 
-    # RECURSIVE SOLUTION
+    # RECURSIVE SOLUTION -
     def reverseList(self, head, prev=None):
         if not head:
           return prev
         curr, head.next = head.next, prev
         return self.reverseList(curr, head)
+
+    # 142. Linked List Cycle II - Medium
+    def detectCycle(self, head: ListNode) -> ListNode:
+        # detecting loop using slow fast pointer 
+        # detecting node using Floyd Cycle detection algo
+        slow = head 
+        fast = head
+        while slow and fast and fast.next:
+            fast = fast.next.next
+            slow = slow.next
+            if fast == slow:
+                return self.detect_cycle_node(head, slow)
+        return None
+            
+    def detect_cycle_node(self, head, slow):
+        fast = head
+        while slow != fast:
+            slow = slow.next
+            fast = fast.next
+        return slow
+
         
 if __name__ == "__main__":
     # 83. Remove Duplicates from Sorted List
@@ -180,4 +201,11 @@ if __name__ == "__main__":
     # Memory Usage: 15.4 MB, less than 25.00% of Python3 online submissions for Reverse Linked List.
     print("REVERSE INPUT",l1.head)
     s.reverse_a_singly_linked_list(l1.head)
-    
+
+    # 23. Merge k Sorted Lists -- HARD
+    # Runtime: 96 ms, faster than 94.14% of Python3 online submissions for Merge k Sorted Lists.
+    # Memory Usage: 18 MB, less than 10.60% of Python3 online submissions for Merge k Sorted Lists
+
+    # 19. Remove Nth Node From End of List -- MEDIUM
+    # Runtime: 24 ms, faster than 97.40% of Python3 online submissions for Remove Nth Node From End of List.
+    # Memory Usage: 14 MB, less than 6.06% of Python3 online submissions for Remove Nth Node From End of List.

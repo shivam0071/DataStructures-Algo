@@ -69,56 +69,6 @@ def numberToWords(num):
                 return words(n//1000**p) + [w] + words(n%1000**p)
     return ' '.join(words(num)) or 'Zero'
 
-@sweet_formatting("SUNIL","")
-def shunil():
-    print("Type any number here : ")
-    user_input = input()
-    while not(user_input.isdigit()):
-        print("only number are allowed ")
-        print("type any number here : ")
-        user_input=input()
-    ones = {"0":" ","1":"one ","2":"two ","3":"three ","4":"four ","5":"five ","6":"six ",
-    "7":"seven ","8":"eight ","9":"nine "}
-    tens={"0":"ten ","1":"eleven ","2":"twelve ","3":"thirteen ","4":"fourteen ",
-    "5":"fifteen ","6":"sixteen ","7":"seventeen ","8":"eighteen ","9":"nineteen "}
-    tens_2={"0":" ","2":"twenty ","3":"thirty ","4":"forty ","5":"fifty "
-    ,"6":"sixty ","7":"seventy ","8":"eighty ","9":"ninety "}
-    hundred ={"0":" ","1":"one hundred ","2":"two hundred ","3":"three hundred ",
-    "4":"four hundred ","5":"five hundred ","6":"six hundred ","7":"seven hundred ",
-    "8":"eight hundred ","9":"nine hundred "}
-    comma_word = {"3":"thousand ","6":"million ","9":"billion "}
-
-    container = " "
-    copy_input = user_input
-    index_switch = len(user_input)
-    comma_switch = 3
-    while index_switch>0:
-        if user_input=="0":
-            container = "zero"
-            break
-        if copy_input[index_switch-2]=="1":
-            for digit in tens:
-                if copy_input[index_switch-1]==digit:
-                    container=tens[digit] + container
-        else:
-            for digit_1 in ones:
-                if copy_input[index_switch-1]==digit_1:
-                    container=ones[digit_1]+container
-            if index_switch>1:
-                for digit_2 in tens_2:
-                    if copy_input[index_switch-2]==digit_2:
-                        container=tens_2[digit_2]+container
-        if index_switch>2:
-            for digit_3 in hundred:
-                if copy_input[index_switch-3]==digit_3:
-                    container = hundred[digit_3]+container
-        if index_switch>3:
-            container = comma_word[str(comma_switch)]+container
-        comma_switch=comma_switch+3
-        index_switch=index_switch-3
-
-    print(container)
-
 if __name__ == "__main__":
     # 18/04/2020
     # Problem 22
@@ -253,4 +203,15 @@ if __name__ == "__main__":
 
 
     numberToWords(1234567891)
-    shunil()
+    # 503. Next Greater Element II - MEDIUM
+    # Runtime: 244 ms, faster than 61.76% of Python3 online submissions for Next Greater Element II.
+    # Memory Usage: 16.2 MB, less than 16.00% of Python3 online submissions for Next Greater Element II.
+
+    
+    # 496. Next Greater Element I - Easy
+    # Runtime: 44 ms, faster than 88.92% of Python3 online submissions for Next Greater Element I.
+    # Memory Usage: 14 MB, less than 7.41% of Python3 online submissions for Next Greater Element I.
+
+    # 1470. Shuffle the Array
+    # Runtime: 56 ms, faster than 100.00% of Python3 online submissions for Shuffle the Array.
+    # Memory Usage: 14.1 MB, less than 100.00% of Python3 online submissions for Shuffle the Array.

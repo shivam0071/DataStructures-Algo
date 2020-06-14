@@ -57,7 +57,8 @@ and checking for isalphanum() and creating a new version of the string.
 14.) SLOW FAST POINTERS (876) - Each time, slow go 1 steps while fast go 2 steps.
 When fast arrives at the end, slow will arrive right in the middle.
 
-
+15.) Floyd Cycle Detection Algorithm - Its used to detect cycles in a Linked List, basically the problem is solved using slow fast pointers and floyd's alog(mathematically proven) IT WORKS!!! (leetcode 142)
+More on this - > https://www.youtube.com/watch?time_continue=2&v=zbozWoMgKW0
 ************************************************************************************************************************************************************************
 ************************************************************************************************************************************************************************
 ************************************************************************************************************************************************************************
@@ -75,4 +76,15 @@ FOR SOLVING PROBLEMS
 
 2.) While reading other's code
     * TRY to understand the algorithm and intuition behind using a particular solution
+
+
+3.) LEET CODE - 1019. Next Greater Node In Linked List - Very Imp
+	res, stack = [], []
+        while head:
+            while stack and stack[-1][1] < head.val:
+                res[stack.pop()[0]] = head.val
+            stack.append([len(res), head.val])
+            res.append(0)
+            head = head.next
+        return res            
 

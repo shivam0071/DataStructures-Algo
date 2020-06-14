@@ -1,0 +1,100 @@
+Trees are non sequential data structures (non liners)
+Trees store data in heirarchy form
+
+Applications - 
+1.) heirarchy data - file system
+2.) Organize data for quick search insertion and deletion -- BS tree takes log N time to find the data
+3.) Tries - used to store dictionaries for dynamic searching
+4.) Network Routing Algos
+
+
+Tress has 
+1.) Root - the top most node with no parents
+2.) Nodes - all the elements in the tree
+3.) Children - any node with a parent is a child except root (2, 3 are Children of 1) 
+4.) Parent - 2 is a parent of 4 5 and 6
+5.) Links - The connections or lines connecting different nodes
+6.) Siblings - children of same nodes
+7.) Leaf Nodes - a node without any  children (4,6 8 etc)
+8.) Grandparent and Grandchild - 1 is Grandparent of 4 and 4 is Grandchild of 1
+9.) Ancestors - 1,2 aand 5 are all ancestors of 10
+10.) Decendent - 10 is a decendent of 1 2 and 5
+11.) Cousins - 6 and 7 are cousins 
+12.) Uncle - Node 3 is uncle of Node 6
+
+          ROOT(1)
+        /       \
+       2         3
+     / | \      /  \
+    4  5  6    7    8
+      / \      |
+     9   10    11
+
+For tree with  N nodes there will be N-1 edges (links) as root wont have an edges
+Depth of node x  = No of edges from root to X = Level of the tree
+    Depth of root node is 0
+    Depth of node 5 is 2 as we have 2 edges
+Maximum depth of a tree is the height of the tree
+
+Height of node X = no of edges in longest path from x to a leaf
+height of node 3 is 2 (7, 11)
+height of leaf node is 0
+height of root node here is 3 = height of tree
+
+
+* We can walk only in 1 direction...root to other nodes and not backwards
+* Tree is a recursive DS, node 2, 3 OR 5 , 7 can be consider as another tre itself
+
+
+
+          ROOT(1)
+         /       \
+        2         3
+      /   \      /  \
+     5     6    7    8
+    / \         /
+    9  10      11
+
+# BINARY TREE
+Link linked list has a Node and Next pointer, btress has left and right to track L and R child
+
+# Maximum number of nodes at Level i = 2 ^ i
+  at level 3 no of nodes can be = 2 ^ 3 = 8 (4, 6, 7 ,8 can have 2 nodes each = 8)
+
+Complete Binary Tree- Nodes should be as left as possible 
+
+# Max nodes in a Binary tree =  2 ^ (no of levels) - 1 OR 2 ^ (h + 1) - 1
+for our example - there are 4 levels [0,1,2,3] so 2 ^ 4 - 1 = 15
+15 nodes are possible
+
+# Height of Perfect Binary Tree can also be calculated as = h = ln(n+1) - 1 [where n is the tota no of nodes]
+# height if Complete binary tree = ln(n)
+
+
+We want to keep the height as small as possible so that searching is faster 
+a min height of a tree can be = ln [n], time complexity = O(ln(n))
+Max height can be = n-1 = O(n)
+
+for input as 2 ^ 100
+log(2^100) = 100
+while O(2^100) = inf (can't be computed by current computers)
+
+
+We can keep the height as mimimum as possible by making a balanced binary tree
+in which the height of left and right sub tree for every node is not more than k (mstly 1)
+
+Height of an empty tree = -1
+Height of a tree with 1 node is = 0
+
+k  = |lheight - rheight|
+
+We can implement binary tree using
+1.) Dynamically created Nodes
+2.) Arrays
+
+[2,4,1,5,8,7,9]
+for node at index i
+left-child index = 2i+1
+right child index = 2i + 2 
+
+
