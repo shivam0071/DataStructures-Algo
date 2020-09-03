@@ -1,0 +1,43 @@
+################## STRATEGY PATTERN ################## 
+
+1.) Design Principle
+        Identify the aspects of your
+        application that vary and separate
+        them from what stays the same.
+    
+
+        The result? Fewer
+        unintended consequences
+        from code changes and more
+        flexibility in your systems!
+
+        take the parts that vary and encapsulate them, so that later you can
+        alter or extend the parts that vary without affecting
+        those that don’t.
+
+        As simple as this concept is, it forms the basis for almost every
+        design pattern. All patterns provide a way to let some part of a system
+        vary independently of all other parts.
+
+
+
+2.) Design Principle
+        Program to an interface, not an implementation.
+        "Program to an interface" really means "Program to a supertype." ?
+
+        An Interface here means some set of rules that everyone should implement, It can be an abstract class or an Interface(defining rules)
+
+        For example
+        BaseClass  obj = new SubClass()
+
+        Now we know that every base class has what methods and variables and we code to 
+        this implementation rather than adding some new logic in concreate classes ?s
+
+
+3.) Design Principle
+        Favor composition over inheritance (Composition is HAS A relation OR using another class objs in One class)
+
+
+The Strategy Pattern defines a family of algorithms(BEHAVIOURS), encapsulates each one, 
+and makes them interchangeable. 
+Strategy lets the algorithm vary independently from clients that use it.
