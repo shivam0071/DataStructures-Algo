@@ -6,22 +6,27 @@ from abc import ABC, abstractmethod
 # THE SUBJECT or THE OBSERVABLE
 class Subject(ABC):
 
+    @abstractmethod
     def register_observer(self):
         pass
-
+    
+    @abstractmethod
     def remove_observer(self):
         pass
 
+    @abstractmethod
     def notify_observer(self):
         pass
 
 class Observer(ABC):
+
+    @abstractmethod
     def update(self, temp, humidity, pressure):
         pass
 
 # To  display the data, encapsulating the changing code
 class DisplayElement(ABC):
-
+    @abstractmethod
     def display(self):
         pass
 

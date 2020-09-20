@@ -1,7 +1,7 @@
 Knowing the OO basics does not make you a good OO designer.
 Good OO designs are reusable, extensible and maintainable.
 Patterns show you how to build systems with good OO design qualities. 
-Patterns are proven objectoriented experience.
+Patterns are proven object oriented experience.
 Patterns don’t give you code, they give you general solutions to design problems. You apply them to your specific application.
 
 ################## STRATEGY PATTERN ################## 
@@ -59,9 +59,9 @@ You know how newspaper or magazine subscriptions work:
             unsubscribe to the newspaper.
 
 
-        Publishers + Subscribers = Obs e r v e r Pa t t e r n
+        Publishers + Subscribers = Obs e r v e r  P a t t e r n
 
-        If you under stand newspaper subscriptions, you pretty much understand the Obser ver Patter n, only we call the publisher
+        If you under stand newspaper subscriptions, you pretty much understand the Observer Pattern, only we call the publisher
         the SUBJECT and the subscribers the OBSERVERS.
 
 
@@ -83,3 +83,102 @@ You know how newspaper or magazine subscriptions work:
 
 
 ################## The DECORATOR PATTERN ################## 
+
+        Design Principle
+                Classes should be open for extension, but closed for modification.
+
+        Our goal is to allow classes to be easily extended to
+        incorporate new behavior without modifying existing code.
+        What do we get if we accomplish this? Designs that are
+        resilient to change and fl exible enough to take on new
+        functionality to meet changing requirements.
+
+
+        While it may seem like a contradiction,
+        there are techniques for allowing code to be
+        extended without direct modification.
+
+        Be careful when choosing the areas of code
+        that need to be extended; applying the
+        Open-Closed Principle EVERYWHERE
+        is wasteful, unnecessary, and can lead to
+        complex, hard to understand code.
+
+        
+        Definition:
+        The Decorator Pattern attaches additional
+        responsibilities to an object dynamically.
+        Decorators provide a flexible alternative to
+        subclassing for extending functionality.
+
+
+        So they are basically like the decorators that we have in Python 
+        it adds to the functionality of the base class or a function
+
+        for example -- a gun class with suppressor/compensator decorators for changing damage and sound
+        
+        This pattern is generally used with Factory Pattern and Builder Pattern 
+        as object creation is nested and prone to bugs and kinda complex
+
+
+
+################## The Factory PATTERN ################## 
+        A factory method handles object creation and encapsulates it in
+        a subclass. This decouples the client code in the superclass from
+        the object creation code in the subclass.
+
+        A factory method is
+        abstract so the subclasses
+        are counted on to handle
+        object creation.
+
+        A factory method may be
+        parameterized (or not)
+        to select among several
+        variations of a product.
+
+        A factory method isolates the client (the
+        code in the superclass, like orderPizza())
+        from knowing what kind of concrete
+        Product is actually created.
+
+        A factory method returns
+        a Product that is typically
+        used within methods defined
+        in the superclass.
+
+
+        Definition
+        The Factory Method Pattern defines an interface
+        for creating an object, but lets subclasses decide which
+        class to instantiate. Factory Method lets a class defer
+        instantiation to subclasses.
+
+  
+        reducing dependencies to concrete classes in our code is a “good thing.”
+
+        Design Principle - The Dependency Inversion Principle
+        Depend upon abstractions. Do not depend upon concrete classes.
+        
+        our high-level components should not depend on our low-level 
+        components; rather, they should both depend on abstractions
+
+        A “high-level” component is a class
+        with behavior defined in terms of
+        other, “low level” components.
+        For example, PizzaStore is a
+        high-level component because
+        its behavior is defined in terms
+        of pizzas - it creates all the
+        different pizza objects, prepares,
+        bakes, cuts, and boxes them, while
+        the pizzas it uses are low-level
+        components.
+
+
+
+        The following guidelines can help you avoid OO designs that violate
+        the Dependency Inversion Principle:
+                1 No variable should hold a reference to a concrete class.
+                2 No class should derive from a concrete class.
+                3 No method should override an implemented method of any of its base classes.
