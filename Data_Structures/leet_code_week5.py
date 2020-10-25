@@ -69,6 +69,28 @@ def numberToWords(num):
                 return words(n//1000**p) + [w] + words(n%1000**p)
     return ' '.join(words(num)) or 'Zero'
 
+@sweet_formatting("","","")
+def sortColors(nums) -> None:
+        """
+        Do not return anything, modify nums in-place instead.
+        """
+        
+        # take 0s to start 2s to end, 3 pointers
+        start = 0
+        end = len(nums) -1 
+        index = 0
+        
+        while start <= end and index <= end:
+            if nums[index] == 0:
+                nums[index] = nums[start]
+                nums[start] = 0
+                start += 1
+                index += 1
+            else:
+                index += 1
+                
+        return nums
+
 if __name__ == "__main__":
     # 18/04/2020
     # Problem 22
@@ -215,3 +237,5 @@ if __name__ == "__main__":
     # 1470. Shuffle the Array
     # Runtime: 56 ms, faster than 100.00% of Python3 online submissions for Shuffle the Array.
     # Memory Usage: 14.1 MB, less than 100.00% of Python3 online submissions for Shuffle the Array.
+
+    sortColors([1,1,1,0,0,0,0,1,1,1])
