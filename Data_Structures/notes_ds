@@ -4,6 +4,8 @@ TRICKS -
 
 1.) FIND MIDPOINT USING - Mainly used for Binary Search
 mid = start + (end-start) // 2   --> if start is somewhere in the middle then we take account of the elements before the start point
+https://hackernoon.com/binary-search-in-detail-914944a1434a
+
 
 2.) RIGHT INDEX - LEFT INDEX
 this gives the total item between to index exluding the Left Index

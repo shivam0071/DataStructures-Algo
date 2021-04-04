@@ -4,8 +4,11 @@ end = "\n" + "*" * 20 + " {} " + "*" * 20 + "\n"
 
 # 1.)  LIST
 # A list is a dynamic array
-# Mutable and hetrogenous(elements are loosly packed), takes up more space
+# Mutable and hetrogenous(elements are loosly packed), takes up more space (8-bytes)
 # can be used in a variety of situations
+# Its better to use NUMPY ARRAYS as they are 50 times faster than lists
+# and are stored in continous memory locations
+
 print(end.format("LIST"))
 ls = [1,2,'Shivam', lambda x: x*2]
 print(ls)
@@ -54,5 +57,10 @@ byt2 = bytearray((0, 1, 2, 3))
 print(byt2)
 
 
+print(end.format("NUMPY ARRAYS"))
+# NUMPY ARRAYS are 50 times faster than lists 
+import numpy as np
+arr = np.array([5, 3, 2, 50, 2])
+print(arr)
 
-
+print(arr, arr.min(), arr.max(), arr.sum())

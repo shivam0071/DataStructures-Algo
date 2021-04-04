@@ -66,7 +66,7 @@ def main():
     # Input keys (use only 'a' through 'z' and lower case) 
     # keys = ["the","a","there","anaswe","any", 
             # "by","their"] 
-    keys = ["shivam","shiv"]
+    keys = ["shivam", "shiv"]
     output = ["Not present in trie", 
               "Present in trie"] 
   
@@ -78,10 +78,10 @@ def main():
         t.insert(key) 
   
     # Search for different keys 
-    print("{} ---- {}".format("shiv",output[t.search("shiv")])) 
-    print("{} ---- {}".format("shivam",output[t.search("shivam")])) 
-    print("{} ---- {}".format("their",output[t.search("their")])) 
-    print("{} ---- {}".format("thaw",output[t.search("thaw")])) 
+    print("{} ---- {}".format("shiv", output[t.search("shiv")]))
+    print("{} ---- {}".format("shivam", output[t.search("shivam")]))
+    print("{} ---- {}".format("their", output[t.search("their")]))
+    print("{} ---- {}".format("thaw", output[t.search("thaw")]))
   
 if __name__ == '__main__': 
     main() 

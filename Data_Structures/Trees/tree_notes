@@ -56,7 +56,7 @@ height of root node here is 3 = height of tree
     9  10      11
 
 # BINARY TREE
-Link linked list has a Node and Next pointer, btress has left and right to track L and R child
+Like linked list has a Node and Next pointer, btree has left and right to track L and R child
 
 # Maximum number of nodes at Level i = 2 ^ i
   at level 3 no of nodes can be = 2 ^ 3 = 8 (4, 6, 7 ,8 can have 2 nodes each = 8)
@@ -67,7 +67,7 @@ Complete Binary Tree- Nodes should be as left as possible
 for our example - there are 4 levels [0,1,2,3] so 2 ^ 4 - 1 = 15
 15 nodes are possible
 
-# Height of Perfect Binary Tree can also be calculated as = h = ln(n+1) - 1 [where n is the tota no of nodes]
+# Height of Perfect Binary Tree can also be calculated as = h = ln(n+1) - 1 [where n is the total no of nodes]
 # height if Complete binary tree = ln(n)
 
 
@@ -80,7 +80,7 @@ log(2^100) = 100
 while O(2^100) = inf (can't be computed by current computers)
 
 
-We can keep the height as mimimum as possible by making a balanced binary tree
+We can keep the height as minimum as possible by making a balanced binary tree
 in which the height of left and right sub tree for every node is not more than k (mstly 1)
 
 Height of an empty tree = -1
