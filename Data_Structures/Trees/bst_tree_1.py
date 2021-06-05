@@ -51,7 +51,17 @@ root.insert(5)
 root.insert(2)
 root.insert(4)
 
-root.PrintTree()
+#      (10)
+#      /   \
+#     6     14
+#    /        \
+#    3          24
+#   / \            \
+#  2   5            44
+#      /
+#     4
 
+root.PrintTree()
+# 2, 3, 4, 5, 6, 10, 14, 24, 44
 print("END", root.data, root.left.data, root.right.data)
-print(root.find(91212))
+print(root.find(44))

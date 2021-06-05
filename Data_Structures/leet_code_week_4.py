@@ -1,21 +1,25 @@
 import time
 import collections
+
 print("Week 4 \nDate 06/04/2020 - 12/04/2020")
 
+
 def sweet_formatting(*deco_args):
-  def normal_decorator(fun):
-    def format_this(*args):
-      print("Question no {}, Problem Name - {}".format(*deco_args))
-      print(f"SOLUTION for INPUT - {args}")
-      t1 = time.time()
-      print(fun(*args))
-      print(f"Time Taken {time.time() - t1} sec")
-      print("*" * 20)
+    def normal_decorator(fun):
+        def format_this(*args):
+            print("Question no {}, Problem Name - {}".format(*deco_args))
+            print(f"SOLUTION for INPUT - {args}")
+            t1 = time.time()
+            print(fun(*args))
+            print(f"Time Taken {time.time() - t1} sec")
+            print("*" * 20)
 
-    return format_this
-  return normal_decorator
+        return format_this
 
-@sweet_formatting("o(N)","1189. EASY")
+    return normal_decorator
+
+
+@sweet_formatting("o(N)", "1189. EASY")
 def maxNumberOfBalloons(text):
     count = collections.Counter(text)
     minimum = count.get('b', 0)
@@ -26,7 +30,8 @@ def maxNumberOfBalloons(text):
 
     return minimum
 
-@sweet_formatting("Still Incorrect",":(")
+
+@sweet_formatting("Still Incorrect", ":(")
 def reverseInParentheses(inp):
     # "foo(bar(baz))blim(data)"
     loop = 0
@@ -35,7 +40,7 @@ def reverseInParentheses(inp):
         data = []
         # print(f"LOOP - {loop}, Inp - {inp[loop]}")
         if inp[loop] == '(':
-            data.append(inp[loop]) # "("
+            data.append(inp[loop])  # "("
             while True:
                 loop += 1
                 # print(f"LOOP - {loop}, Inp - {inp[loop]}")
@@ -71,7 +76,8 @@ def reverseInParentheses(inp):
 
     return output
 
-@sweet_formatting("Very Smart , O(n) Time and space complexity ","Code Signal, Hash Tables")
+
+@sweet_formatting("Very Smart , O(n) Time and space complexity ", "Code Signal, Hash Tables")
 def containsCloseNums(nums, k):
     # nums = [0, 1, 2, 3, 5, 2,.,.,2]
     # k = 3
@@ -85,27 +91,30 @@ def containsCloseNums(nums, k):
             data.update({ele: idx + k})
     return False
 
-@sweet_formatting("Medium","55. Jump Game")
+
+@sweet_formatting("Medium", "55. Jump Game")
 def canJump(nums):
     """We will iterate from the backwards and see if we can reach the end from the begin"""
     # [2,3,1,1,4]
-    last_valid_index = len(nums) - 1 # We have to reach the last element
+    last_valid_index = len(nums) - 1  # We have to reach the last element
     for idx in range(len(nums) - 1, -1, -1):
         print(f"IDX - {idx}, SUM - {idx + nums[idx]}, LAST INX - {last_valid_index}")
-        if idx + nums[idx] >= last_valid_index:    # greater because a 4 can make jumps 4,3,2,1
+        if idx + nums[idx] >= last_valid_index:  # greater because a 4 can make jumps 4,3,2,1
             last_valid_index = idx
             print(last_valid_index)
 
     return last_valid_index == 0
 
-@sweet_formatting("Constant Time, USing string in hash sets","")
+
+@sweet_formatting("Constant Time, USing string in hash sets", "")
 def isValidSudoku(board):
     seen = set()
     for i in range(len(board)):
         for j in range(len(board)):
             current_val = board[i][j]
             if current_val != '.':
-                if current_val + " is in row " + str(i) not in seen and current_val + " is in column " + str(j) not in seen and current_val + " is in box " + str(i//3) + "-" + str(j//3)  not in seen:
+                if current_val + " is in row " + str(i) not in seen and current_val + " is in column " + str(
+                        j) not in seen and current_val + " is in box " + str(i // 3) + "-" + str(j // 3) not in seen:
                     seen.add(current_val + " is in row " + str(i))
                     seen.add(current_val + " is in column " + str(j))
                     seen.add(current_val + " is in box " + str(i // 3) + "-" + str(j // 3))
@@ -115,8 +124,9 @@ def isValidSudoku(board):
 
     return True
 
-@sweet_formatting("EASY","")
-def distributeCandies(candies: int, num_people: int) :
+
+@sweet_formatting("EASY", "")
+def distributeCandies(candies: int, num_people: int):
     output = [0] * num_people
     counter = 0
     while candies > 0:
@@ -137,8 +147,9 @@ def distributeCandies(candies: int, num_people: int) :
     print(output)
     return output
 
-@sweet_formatting("EASY, Better way","")
-def distributeCandies_2(candies: int, num_people: int) :
+
+@sweet_formatting("EASY, Better way", "")
+def distributeCandies_2(candies: int, num_people: int):
     # output = [0] * num_people
     # counter = 0
     # i = 0
@@ -163,7 +174,8 @@ def distributeCandies_2(candies: int, num_people: int) :
         counter += 1
     print(out)
 
-@sweet_formatting("Sliding window O(n)","3. Medium")
+
+@sweet_formatting("Sliding window O(n)", "3. Medium")
 def lengthOfLongestSubstring(s: str):
     # "abcabcbb"
     left = 0
@@ -181,6 +193,48 @@ def lengthOfLongestSubstring(s: str):
     print(max_s)
 
 
+def some_ques():
+    input = "219"
+    if input[0] == '0' or input is None:
+        return 0
+
+    left, right = 1, 1
+    for i in range(1, len(input)):
+        if input[i] == '0':
+            left = 0
+        if input[i - 1] == '1' or (input[i - 1] == '2' and input[i] <= '6'):
+            left += right  # 2
+            right = left - right  # 1
+        else:
+            right = left
+
+    print(left)
+    return left
+
+
+def productExceptSelf(nums):
+    # [5, 2, 3, 4]
+    LEFT = [1, 5, 10, 30]
+    RIGHT = [24, 12, 4, 1]
+    MERGE = [24, 60, 40, 30]
+
+
+    track = 1
+    n = len(nums)
+    output = []
+    import pdb
+    pdb.set_trace()
+    for i in range(0, n):
+        output.append(track)
+        track = track * nums[i]
+    track = 1
+    for i in range(n - 1, -1, -1):
+        output[i] = output[i] * track
+        track = track * nums[i]
+    print(output)
+    return output
+
+
 if __name__ == "__main__":
     # problem 16 - EASY
     # 06/04/2020 11:36 PM
@@ -193,7 +247,6 @@ if __name__ == "__main__":
     maxNumberOfBalloons(text)
     # "Runtime: 24 ms, faster than 94.17% of Python3 online submissions for Maximum Number of Balloons.
     # Memory Usage: 14 MB, less than 100.00% of Python3 online submissions for Maximum Number of Balloons."
-
 
     # Code Signal - reverse in paranthesis
     # "Write a function that reverses characters in (possibly nested) parentheses in the input string.
@@ -210,7 +263,7 @@ if __name__ == "__main__":
     # containsCloseNums(nums, k) = true.
     # There are two 2s in nums, and the absolute difference between their positions is exactly 3."
     # nums = [0, 1, 2, 3, 5, 2]
-    nums =  [1, 0, 1, 1]
+    nums = [1, 0, 1, 1]
     k = 1
     # k = 3
     containsCloseNums(nums, k)
@@ -229,7 +282,7 @@ if __name__ == "__main__":
     # Input: [2,3,1,1,4]
     # Output: true
     # Explanation: Jump 1 step from index 0 to 1, then 3 steps to the last index."
-    ls = [2,0,0]
+    ls = [2, 0, 0]
     canJump(ls)
     # "Runtime: 80 ms, faster than 98.36% of Python3 online submissions for Jump Game.
     # Memory Usage: 15.9 MB, less than 7.14% of Python3 online submissions for Jump Game."
@@ -293,3 +346,7 @@ if __name__ == "__main__":
     lengthOfLongestSubstring(s)
     # Runtime: 72 ms, faster than 46.13% of Python3 online submissions for Longest Substring Without Repeating Characters.
     # Memory Usage: 14 MB, less than 5.10% of Python3 online submissions for Longest Substring Without Repeating Characters.
+
+    some_ques()
+
+    productExceptSelf([5, 2, 3, 4])

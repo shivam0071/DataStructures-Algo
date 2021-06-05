@@ -32,7 +32,7 @@ print(end.format("Array.Array"))
 # that the type of objects stored in them is constrained
 
 import array
-arr = array.array('f',(1.0,2.0,3.2,))
+arr = array.array('f', (1.0, 2.0, 3.2,))
 print(arr)
 arr2 = array.array('i',(1,2,3))
 print(arr2)

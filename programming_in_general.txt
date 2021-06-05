@@ -1,0 +1,12 @@
+1.) Think about what you are doing while you are doing it
+2.) Everyday work to refine the skills you have an add many tools to your skills
+3.) Take responsibilities and prodive options instead of saying can't be done
+4.) Invest Regularly in your knowledge portfolio
+    GOALS:
+        1) Learn atleast one programmng language every year
+        2.) Read a technical book each month -- Realted to your technology and Other tech as well
+        3.) Read Non Technical Books too -- Books on Softskills, Security Etc
+        4.) Take Classes or Online Courses
+        5.) EXplore different environments...use Linux if you are familar with windows...try some new IDEs
+        6.) Stay Current - read news and posts about your tech and different tech to get familar with Jargons
+

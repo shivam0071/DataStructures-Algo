@@ -1,3 +1,9 @@
+# The Strategy Pattern defines a family of algorithms,
+# encapsulates each one, and makes them interchangeable.
+# Strategy lets the algorithm vary independently from
+# clients that use it.
+
+
 from abc import ABC, abstractmethod
 
 
@@ -21,7 +27,7 @@ class Duck(ABC):
     def swim(self):
         print("Every Duck Floats, Even the Fake Ones")
     
-    # Definning Setters for Dynamic Behavour change
+    # Defining Setters for Dynamic Behaviour change
 
     def set_fly_behaviour(self, fb):
         self.fly_behaviour = fb
@@ -36,6 +42,7 @@ class FlyBehavior(ABC):
         pass
 
 class QuackBehavior(ABC):
+
     @abstractmethod
     def quack(self):
         pass
@@ -93,5 +100,5 @@ MiniDuckSimulation.execute_simulation()
 
 
 # We can add as many as Fly and Quack behavours and assign them to our ducks dynamically 
-# Similarly we can add new behavours without changing the Base Duck code
+# Similarly we can add new behaviours without changing the Base Duck code
 # That way we are not adding methods to all the classes, some minght not need them

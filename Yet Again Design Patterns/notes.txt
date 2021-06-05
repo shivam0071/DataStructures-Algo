@@ -61,7 +61,7 @@ You know how newspaper or magazine subscriptions work:
 
         Publishers + Subscribers = Obs e r v e r  P a t t e r n
 
-        If you under stand newspaper subscriptions, you pretty much understand the Observer Pattern, only we call the publisher
+            If you under stand newspaper subscriptions, you pretty much understand the Observer Pattern, only we call the publisher
         the SUBJECT and the subscribers the OBSERVERS.
 
 
@@ -90,7 +90,7 @@ You know how newspaper or magazine subscriptions work:
         Our goal is to allow classes to be easily extended to
         incorporate new behavior without modifying existing code.
         What do we get if we accomplish this? Designs that are
-        resilient to change and fl exible enough to take on new
+        resilient to change and flexible enough to take on new
         functionality to meet changing requirements.
 
 

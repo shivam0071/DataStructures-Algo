@@ -41,7 +41,7 @@ class WeatherData(Subject):
 
     def __init__(self):
         self.observers = []
-        self. temp = None
+        self.temp = None
         self.humid = None
         self.pressure = None
 

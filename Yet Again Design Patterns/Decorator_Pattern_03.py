@@ -27,7 +27,7 @@ class Beverage(ABC):
 class CondimentDecorator(Beverage):
 
     @abstractmethod
-    def get_description():
+    def get_description(self):
         """So that we can name each of them, mocha, soy milk, chocolate etc"""
         pass
 
